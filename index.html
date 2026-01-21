@@ -2,136 +2,164 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>CareDecoded</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <title>CareDecoded – Decode Your Skin & Hair</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="logo">
-        <svg class="logo-icon" viewBox="0 0 100 100" aria-hidden="true">
-          <circle cx="50" cy="50" r="46" fill="#e6f4f1" />
-          <rect x="44" y="26" width="12" height="48" rx="6" fill="#0f766e" />
-          <rect x="26" y="44" width="48" height="12" rx="6" fill="#0f766e" />
-          <path
-            d="M50 34
-               C42 38, 40 48, 44 56
-               C48 64, 58 64, 62 56
-               C66 48, 58 38, 50 34Z"
-            fill="#ffffff"
-          />
-        </svg>
-        <span class="logo-text">CareDecoded</span>
-      </div>
+    <!-- Header -->
+    <header class="header">
+      <div class="container nav">
+        <!-- LEFT GROUP -->
+        <div class="nav-left">
+          <div class="logo">CareDecoded</div>
 
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-      </nav>
+          <nav class="main-nav">
+            <a href="#">How It Works</a>
+            <a href="#">Learn</a>
+            <a href="#">Care Insights</a>
+            <a href="#">Routines</a>
+          </nav>
+        </div>
+
+        <!-- RIGHT GROUP (EMPTY FOR NOW) -->
+        <div class="nav-right">
+          <!-- search / profile later -->
+        </div>
+      </div>
     </header>
 
-    <main class="container">
-      <!-- HERO -->
-      <section class="hero">
-        <div class="hero-text">
-          <h2>Decode your skin, hair, and health — simply and honestly.</h2>
-          <p>
-            CareDecoded helps you understand everyday personal care with
-            clarity, care, and honesty. No hype. No fear. Just information you
-            can trust.
-          </p>
-          <button>Explore Care Guides</button>
-        </div>
+    <!-- Hero Section -->
+    <!-- HERO IMAGE SLIDER -->
+    <section class="hero-slider">
+      <!-- SLIDES -->
+      <div class="slides">
+        <img src="assets/images/slide1.jpg" class="slide active" />
+        <img src="assets/images/slide2.jpg" class="slide" />
+        <img src="assets/images/slide3.jpg" class="slide" />
+      </div>
 
-        <!-- MOBILE-FIRST SLIDER -->
-        <div class="slider-wrapper">
-          <button class="slider-btn left">‹</button>
+      <!-- ARROWS -->
+      <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+      <button class="arrow right" onclick="nextSlide()">&#10095;</button>
 
-          <div class="slider" id="slider">
-            <img
-              src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=900&q=80"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?auto=format&fit=crop&w=900&q=80"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=900&q=80"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=900&q=80"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1598662972299-5408ddb8a3dc?auto=format&fit=crop&w=900&q=80"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&w=900&q=80"
-            />
+      <!-- DOTS -->
+      <div class="dots">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+      </div>
+    </section>
+
+    <script src="slider.js"></script>
+
+    <!-- Featured Guides -->
+    <section class="section">
+      <div class="container">
+        <h3 class="section-title">Beginner Friendly Guides</h3>
+
+        <div class="card-grid">
+          <div class="card">
+            <h4>Skin Types Explained</h4>
+            <p>
+              Dry, oily, combination or sensitive — learn how to identify yours
+              correctly.
+            </p>
           </div>
 
-          <button class="slider-btn right">›</button>
-        </div>
-      </section>
+          <div class="card">
+            <h4>Hair Type Decoder</h4>
+            <p>
+              Understand porosity, scalp condition and hair texture
+              step-by-step.
+            </p>
+          </div>
 
-      <!-- CATEGORIES -->
-      <section class="sections">
-        <div class="card">
-          <h3>🧴 Skin Care</h3>
-          <p>
-            Understand skin types, ingredients, and routines that actually work.
-          </p>
-        </div>
-        <div class="card">
-          <h3>💇 Hair Care</h3>
-          <p>
-            Clear guidance on scalp health, dandruff, hair fall, and care
-            routines.
-          </p>
-        </div>
-        <div class="card">
-          <h3>🌿 Health Essentials</h3>
-          <p>Simple, science-based information for everyday wellness.</p>
-        </div>
-      </section>
-    </main>
+          <div class="card">
+            <h4>Ingredient Basics</h4>
+            <p>What ingredients actually do and who should use them.</p>
+          </div>
 
-    <footer>
-      © 2026 CareDecoded • Educational content only • Not medical advice
+          <div class="card">
+            <h4>Routine Builder</h4>
+            <p>Create a simple AM/PM routine based on your concerns.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Decode Insight Section -->
+    <section class="insight">
+      <div class="container insight-content">
+        <h3>Care Insights</h3>
+        <p>
+          Decode patterns behind acne, pigmentation, hair fall, dandruff, and
+          lifestyle impact — not just surface-level advice.
+        </p>
+        <button class="secondary-btn">Explore Insights</button>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section">
+      <div class="container">
+        <h3 class="section-title">Explore By Category</h3>
+
+        <div class="category-grid">
+          <div class="category-card">Skin Care</div>
+          <div class="category-card">Hair Care</div>
+          <div class="category-card">Lifestyle</div>
+          <div class="category-card">Nutrition</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Concerns -->
+    <section class="section light">
+      <div class="container">
+        <h3 class="section-title">Common Concerns</h3>
+
+        <div class="concern-grid">
+          <div class="concern">Acne & Breakouts</div>
+          <div class="concern">Pigmentation</div>
+          <div class="concern">Hair Fall</div>
+          <div class="concern">Dandruff</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Philosophy -->
+    <section class="section">
+      <div class="container philosophy">
+        <div>
+          <h4>Science First</h4>
+          <p>Education before recommendation.</p>
+        </div>
+        <div>
+          <h4>Personalized</h4>
+          <p>Care based on your unique skin & hair profile.</p>
+        </div>
+        <div>
+          <h4>Beginner Safe</h4>
+          <p>No overwhelm. Only what you need.</p>
+        </div>
+        <div>
+          <h4>Routine Driven</h4>
+          <p>Consistency over trends.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <p>© 2026 CareDecoded. Decode before you decide.</p>
+        <div class="footer-links">
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="#">Privacy</a>
+        </div>
+      </div>
     </footer>
-
-    <script>
-      const slider = document.getElementById("slider");
-      const slides = slider.children;
-      let index = 0;
-      let startX = 0;
-
-      function updateSlide() {
-        slider.style.transform = `translateX(-${index * 100}%)`;
-      }
-
-      document.querySelector(".slider-btn.right").onclick = () => {
-        index = (index + 1) % slides.length;
-        updateSlide();
-      };
-
-      document.querySelector(".slider-btn.left").onclick = () => {
-        index = (index - 1 + slides.length) % slides.length;
-        updateSlide();
-      };
-
-      slider.addEventListener("touchstart", (e) => {
-        startX = e.touches[0].clientX;
-      });
-
-      slider.addEventListener("touchend", (e) => {
-        const endX = e.changedTouches[0].clientX;
-        if (startX - endX > 50) index = (index + 1) % slides.length;
-        if (endX - startX > 50)
-          index = (index - 1 + slides.length) % slides.length;
-        updateSlide();
-      });
-    </script>
   </body>
 </html>
