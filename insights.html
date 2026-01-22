@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Care Insights | CareDecoded</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="care-insights-page">
+      <h1 class="insights-title">Care Insights</h1>
+
+      <!-- TOGGLE BUTTONS -->
+      <div class="insights-toggle">
+        <button class="toggle-btn active" onclick="showSkin()">
+          Skin Concerns
+        </button>
+        <button class="toggle-btn" onclick="showHair()">Hair Concerns</button>
+      </div>
+
+      <!-- SKIN CONCERNS -->
+      <div id="skinConcerns" class="concerns-grid visible">
+        <div class="insight-card">
+          <img src="assests/images/skin-acne.jpg" alt="Acne" />
+          <h3>Acne</h3>
+          <p>
+            Acne usually happens when pores get blocked with oil and dead skin.
+            Hormones, stress, or harsh products can make it worse. A calm,
+            balanced routine helps reduce breakouts over time.
+          </p>
+        </div>
+
+        <div class="insight-card">
+          <img src="assets/images/skin-pigmentation.jpg" alt="Pigmentation" />
+          <h3>Pigmentation</h3>
+          <p>
+            Dark spots and uneven tone often appear after sun exposure or acne.
+            Gentle care and daily protection help skin regain clarity slowly.
+          </p>
+        </div>
+
+        <div class="insight-card">
+          <img src="assests/images/skin-sensitive.jpg" alt="Sensitive Skin" />
+          <h3>Sensitive Skin</h3>
+          <p>
+            If your skin reacts easily, it usually means the barrier is weak.
+            Simple routines and fewer products help restore comfort.
+          </p>
+        </div>
+      </div>
+
+      <!-- HAIR CONCERNS -->
+      <div id="hairConcerns" class="concerns-grid">
+        <div class="insight-card">
+          <img src="assests/images/hair-dandruff.jpg" alt="Dandruff" />
+          <h3>Dandruff</h3>
+          <p>
+            Flakes and itching often come from scalp imbalance. The right
+            cleansing routine can bring relief and control.
+          </p>
+        </div>
+
+        <div class="insight-card">
+          <img src="assets/images/hair-hairfall.jpg" alt="Hair Fall" />
+          <h3>Hair Fall</h3>
+          <p>
+            Hair fall may increase due to stress, nutrition, or scalp health.
+            Understanding the cause is the first step to managing it.
+          </p>
+        </div>
+
+        <div class="insight-card">
+          <img src="assets/images/hair-oily-scalp.jpg" alt="Oily Scalp" />
+          <h3>Oily Scalp</h3>
+          <p>
+            An oily scalp can make hair greasy quickly and clog follicles.
+            Balanced washing keeps the scalp fresh and healthy.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script src="insights.js"></script>
+  </body>
+</html>
